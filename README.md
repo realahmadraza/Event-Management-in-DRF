@@ -84,8 +84,8 @@ To enable background email reminders:
 ```
 Ensure Redis is running (redis://localhost:6379/0)
 ```
-```
 Start Celery workers:
 ```
 celery -A project worker -l info
 celery -A project beat -l info
+```
