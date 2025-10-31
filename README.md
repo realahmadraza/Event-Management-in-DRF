@@ -74,4 +74,18 @@ python manage.py migrate
 python manage.py createsuperuser
 
 python manage.py runserver
-
+```
+🔗 To find all api urls type command
+```
+python manage.py show_urls
+```
+🕒 Asynchronous Tasks (Celery)
+To enable background email reminders:
+```
+Ensure Redis is running (redis://localhost:6379/0)
+```
+```
+Start Celery workers:
+```
+celery -A project worker -l info
+celery -A project beat -l info
